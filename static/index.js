@@ -122,7 +122,7 @@ function gameRestart() {
     _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 20;
+    _gameTimeNum = 30;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
@@ -265,7 +265,7 @@ function gameTapEvent(e) {
         gameLayerMoveNextRow();
     } else if (_gameStart && !tar.notEmpty) {
         createjs.Sound.play("err");
-        gameOver();
+        //gameOver();
         tar.className += ' bad';
     }
     return false;
