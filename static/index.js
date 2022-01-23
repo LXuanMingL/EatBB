@@ -264,9 +264,9 @@ function gameTapEvent(e) {
         _gameScore++;
         gameLayerMoveNextRow();
     } else if (_gameStart && !tar.notEmpty) {
-        createjs.Sound.play("err");
+        //createjs.Sound.play("err");
         //gameOver();
-        tar.className += ' bad';
+        //tar.className += ' bad';
     }
     return false;
 }
@@ -341,10 +341,10 @@ function shareText(score) {
         return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
-    if (score <= 49) return '试着好好练一下？';
-    if (score <= 99) return 'TCL';
-    if (score <= 149) return 'TQL';
-    if (score <= 199) return '您';
+    if (score <= 49) return '这都打不到吗，哥哥';
+    if (score <= 99) return '不太行';
+    if (score <= 149) return '一般般';
+    if (score <= 199) return '爽了吧';
     return '人？';
 }
 
