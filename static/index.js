@@ -340,10 +340,10 @@ function shareText(score) {
     // }
     SubmitResults();
     if (score <= 49) return '这都打不到吗，哥哥';
-    if (score <= 99) return '不太行';
-    if (score <= 149) return '一般般';
-    if (score <= 199) return '还可以';
-    return '爽了吧';
+    if (score <= 99) return '不太行啊，小老弟';
+    if (score <= 149) return '一般般，正常人水平';
+    if (score <= 199) return '还可以，建议今晚多来几发练习下';
+    return '爽了吧，直接撸冒烟';
 }
 
 function toStr(obj) {
