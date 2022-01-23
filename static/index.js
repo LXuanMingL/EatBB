@@ -305,10 +305,10 @@ function showGameScoreLayer() {
     l.className = l.className.replace(/bgc\d/, 'bgc' + c);
     document.getElementById('GameScoreLayer-text').innerHTML = shareText(_gameScore);
     var score_text='得分&nbsp;&nbsp;';
-    score_text+=deviation_time<23000?_gameScore:"<span style='color:red;'>"+_gameScore+"</span>";
+    score_text+=deviation_time<100000?_gameScore:"<span style='color:red;'>"+_gameScore+"</span>";
     document.getElementById('GameScoreLayer-score').innerHTML = score_text;
     var bast = cookie('bast-score');
-    if(deviation_time<23000){
+    if(deviation_time<100000){
         if (!bast || _gameScore > bast) {
             bast = _gameScore;
             cookie('bast-score', bast, 100);
@@ -344,8 +344,8 @@ function shareText(score) {
     if (score <= 49) return '这都打不到吗，哥哥';
     if (score <= 99) return '不太行';
     if (score <= 149) return '一般般';
-    if (score <= 199) return '爽了吧';
-    return '人？';
+    if (score <= 199) return '还可以';
+    return '爽了吧';
 }
 
 function toStr(obj) {
